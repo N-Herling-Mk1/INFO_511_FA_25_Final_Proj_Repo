@@ -22,7 +22,7 @@
 ">
 
   <div style="
-    font-size:3.2rem;
+    font-size:5.2rem;
     font-weight:900;
     line-height:1.1;
   ">
@@ -33,6 +33,7 @@
     margin-top:10px;
     font-size:1.45rem;
     font-weight:700;
+    font-size:5.2rem;
   ">
     M.S. Student, Data Science
   </div>
