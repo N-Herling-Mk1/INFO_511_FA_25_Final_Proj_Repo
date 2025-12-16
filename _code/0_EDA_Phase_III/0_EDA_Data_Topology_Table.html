@@ -1,0 +1,116 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Data Topology Summary</title>
+
+<style>
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #444444;
+}
+
+table.master {
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 3px solid #000;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 95%;
+}
+
+table.master th {
+  background: #cce6ff;
+  padding: 10px;
+  border: 1px solid #000;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+table.master td {
+  background: #f4e8d2;
+  padding: 10px;
+  border: 1px solid #000;
+  font-size: 16px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 14px;
+  font-size: 16px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="title">Table — Data Topology Summary</div>
+<div class="subtitle">Phase II Annual Meteorite Count Distribution</div>
+
+<table class="master">
+<thead>
+<tr>
+<th>Metric</th><th>Value</th><th>Elucidation</th><th>Suggestions</th></tr></thead><tbody>
+<tr>
+<td>Skewness</td>
+<td>3.800</td>
+<td>Skewness measures asymmetry. Positive values indicate a right-tail, common in count data. Strong skew suggests benefit from transformation.</td>
+<td>Examine histogram; apply log transform if skew > 1.</td>
+</tr>
+<tr>
+<td>Kurtosis (Fisher)</td>
+<td>15.132</td>
+<td>Kurtosis measures tail weight. Positive values indicate heavier-than-normal tails, which affect normality and regression assumptions.</td>
+<td>Interpret tail weight; check QQ plot for deviation.</td>
+</tr>
+<tr>
+<td>Estimated # of Modes</td>
+<td>4</td>
+<td>A proxy for modality. More than one mode suggests multimodal behavior and possible underlying subgroups.</td>
+<td>If >1, consider segmenting dataset.</td>
+</tr>
+<tr>
+<td>Shape Classification</td>
+<td>Right-skewed (heavy-tailed)</td>
+<td>Combines skewness and kurtosis into a qualitative description of the distribution's shape.</td>
+<td>Use this to evaluate linear model assumptions.</td>
+</tr>
+<tr>
+<td>Suggested Transformation</td>
+<td>Apply log(count + 1) or sqrt(count); multimodality detected — consider segmentation</td>
+<td>Transformations help stabilize variance and reduce skewness. Log and sqrt are typical for right-skewed count data.</td>
+<td>Apply log(count + 1) or sqrt(count); multimodality detected — consider segmentation</td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="footer">
+Table X. Summary of distribution topology and transformation guidance.
+</div>
+
+</body>
+</html>

@@ -128,6 +128,43 @@ of meteorite discovery records.
 <li>Visual communication of analytical results</li>
 </ul>
 
+## 🧬 Code Genealogy (EDA Pipeline)
+
+The exploratory data analysis was conducted in four structured phases.  
+Each phase builds on the previous, producing intermediate datasets,
+diagnostics, and visual summaries used in later modeling stages.
+
+### Phase I — Raw Data Profiling
+- `EDA_Phase_1.py` — Driver script for initial exploratory analysis.
+- `0_EDA_phase_I_Master_Table.py` — Metadata summary of raw dataset.
+- `0_EDA_phase_I_Histogram.py` — Raw annual count distributions.
+- `0_EDA_phase_I_BoxPlot.py` — Outlier visualization via box plot.
+- `0_EDA_phase_I_QQplot.py` — Normality assessment of raw counts.
+- `0_EDA_phase_I_outLier_Table.py` — IQR-based outlier summary.
+
+### Phase II — Filtering & Aggregation
+- `0_EDA_phase_II_df_maker.py` — Cleans data and aggregates yearly counts.
+- `0_EDA_phase_II_Master_Table.py` — Year-level feature summary.
+- `0_EDA_phase_II_Histogram.py` — Distribution of annual counts.
+- `0_EDA_phase_II_BoxPlot.py` — Box plot of aggregated counts.
+- `0_EDA_phase_II_QQplot.py` — Normality check before transformation.
+- `0_EDA_phase_II_OutlierTable.py` — Outlier statistics post-aggregation.
+
+### Phase III — Transformation & Topology
+- `0_EDA_phase_III_data_transform.py` — Applies log and sqrt transforms.
+- `0_EDA_phase_III_master_table.py` — Feature summary with transforms.
+- `0_EDA_phase_III_Histogram_plot.py` — Transformed distributions.
+- `0_EDA_phase_III_Box_plot.py` — Box plots for transformed data.
+- `0_EDA_phase_III_QQ_plot.py` — QQ plots for transformed variables.
+- `0_EDA_phase_III_Data_Topology_check.py` — Skewness and tail diagnostics.
+- `0_EDA_phase_III_OutlierTable.py` — Outlier comparison across scales.
+
+### Phase IV — Model Diagnostics & Comparison
+- `0_EDA_phase_IV_analysis.py` — Automated regression assumption testing.
+- `0_EDA_phase_IV_compare_contrast_test.py` — Log vs. sqrt model comparison.
+- `0_EDA_phase_IV_presentation_table.py` — Final presentation-ready tables.
+
+
 <h2>📄 License</h2>
 
 <p>

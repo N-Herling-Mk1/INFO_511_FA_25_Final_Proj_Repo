@@ -1,0 +1,167 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Master Table — Phase I</title>
+<style>
+
+  body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    padding: 20px;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+
+  .subtitle {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #444444;
+  }
+
+  .footer {
+    font-size: 16px;
+    margin-top: 12px;
+  }
+
+  table.master {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 3px solid #000000;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  table.master th {
+    background: #94e19c;
+    padding: 10px;
+    border: 1px solid #000;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  table.master td {
+    background: #f4e8d2;
+    padding: 10px;
+    border: 1px solid #000;
+    font-size: 16px;
+    text-align: center;
+  }
+
+</style>
+</head>
+
+<body>
+
+<div class="title">Table 1 — Meteorite Landings Raw Data Table</div>
+<div class="subtitle">Dataset Size: 45,716 rows × 10 columns</div>
+
+<table class="master">
+  <thead>
+    <tr>
+      <th>Feature Name</th>
+      <th>Pandas dType</th>
+      <th>Categorical / Numerical</th>
+      <th># Unique</th>
+      <th>% Missing</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name</td>
+      <td>object</td>
+      <td>Categorical</td>
+      <td>45716</td>
+      <td>0.00%</td>
+      <td>Name of the meteorite as recorded in the catalog.</td>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td>int64</td>
+      <td>Numerical</td>
+      <td>45716</td>
+      <td>0.00%</td>
+      <td>Unique numeric identifier assigned to each meteorite record.</td>
+    </tr>
+    <tr>
+      <td>nametype</td>
+      <td>object</td>
+      <td>Categorical</td>
+      <td>2</td>
+      <td>0.00%</td>
+      <td>Indicates valid meteorite names (Valid) or paired/duplicate names (Relict).</td>
+    </tr>
+    <tr>
+      <td>recclass</td>
+      <td>object</td>
+      <td>Categorical</td>
+      <td>466</td>
+      <td>0.00%</td>
+      <td>Classification based on chemical and petrological type.</td>
+    </tr>
+    <tr>
+      <td>mass (g)</td>
+      <td>float64</td>
+      <td>Numerical</td>
+      <td>12576</td>
+      <td>0.29%</td>
+      <td>Reported mass of the meteorite in grams.</td>
+    </tr>
+    <tr>
+      <td>fall</td>
+      <td>object</td>
+      <td>Categorical</td>
+      <td>2</td>
+      <td>0.00%</td>
+      <td>Indicates whether the meteorite was Fell (observed fall) or Found.</td>
+    </tr>
+    <tr>
+      <td>year</td>
+      <td>float64</td>
+      <td>Numerical</td>
+      <td>265</td>
+      <td>0.64%</td>
+      <td>Year the meteorite was found or fell.</td>
+    </tr>
+    <tr>
+      <td>reclat</td>
+      <td>float64</td>
+      <td>Numerical</td>
+      <td>12738</td>
+      <td>16.00%</td>
+      <td>Latitude of the recovery site.</td>
+    </tr>
+    <tr>
+      <td>reclong</td>
+      <td>float64</td>
+      <td>Numerical</td>
+      <td>14640</td>
+      <td>16.00%</td>
+      <td>Longitude of the recovery site.</td>
+    </tr>
+    <tr>
+      <td>GeoLocation</td>
+      <td>object</td>
+      <td>Categorical</td>
+      <td>17100</td>
+      <td>16.00%</td>
+      <td>Coordinate pair representing the recovery location (latitude, longitude).</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<div class="footer"><b>Table 1.</b> A Summary of the raw 'Meteorite Landgings' dataset features.</div>
+
+</body>
+</html>

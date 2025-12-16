@@ -1,0 +1,123 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Phase III Master Table</title>
+
+<style>
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 18px;
+  color: #333333;
+}
+
+table.master {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 3px solid #000;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+}
+
+table.master th {
+  background: #8FE29D;
+  padding: 8px;
+  border: 1px solid #000;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+table.master td {
+  background: #f4e8d2;
+  padding: 8px;
+  border: 1px solid #000;
+  font-size: 16px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 14px;
+  font-size: 16px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="title">Phase III — Master Feature Table</div>
+<div class="subtitle">Dataset Size: 223 rows × 4 columns</div>
+
+<table class="master">
+<thead>
+<tr>
+<th>Feature Name</th><th>Pandas dtype</th><th>Categorical / Numerical</th><th># Unique</th><th>% Missing</th><th>Description</th><th>Transform Summary</th></tr></thead><tbody>
+<tr>
+<td>year</td>
+<td>int64</td>
+<td>Numerical</td>
+<td>223</td>
+<td>0.00%</td>
+<td>Four-digit calendar year of meteorite record.</td>
+<td>Not transformed</td>
+</tr>
+<tr>
+<td>count</td>
+<td>int64</td>
+<td>Numerical</td>
+<td>41</td>
+<td>0.00%</td>
+<td>Number of meteorites recorded for the given year.</td>
+<td>Not transformed</td>
+</tr>
+<tr>
+<td>count_log</td>
+<td>float64</td>
+<td>Numerical</td>
+<td>41</td>
+<td>0.00%</td>
+<td>Log-transformed annual meteorite count: log(count + 1).</td>
+<td>mean=1.997, std=0.985, min=0.693, max=3.970</td>
+</tr>
+<tr>
+<td>count_sqrt</td>
+<td>float64</td>
+<td>Numerical</td>
+<td>41</td>
+<td>0.00%</td>
+<td>Square-root-transformed annual meteorite count.</td>
+<td>mean=2.826, std=1.585, min=1.000, max=7.211</td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="footer">
+Table X. Summary of Phase III features, transformations, and distribution characteristics.
+</div>
+
+</body>
+</html>

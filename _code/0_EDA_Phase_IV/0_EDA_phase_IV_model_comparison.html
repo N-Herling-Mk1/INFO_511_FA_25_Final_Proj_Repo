@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Phase IV Model Comparison</title>
+<style>
+body {
+    font-family: Arial; padding:20px;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+th {
+    background: #9F7CFF;
+    padding: 10px;
+    border: 1px solid black;
+    text-align:center;
+}
+td {
+    background: #f3f0ff;
+    padding: 8px;
+    border: 1px solid black;
+    text-align:center;
+}
+h2 {
+    text-align:center;
+}
+.desc {
+    font-size: 16px;
+    margin-bottom: 25px;
+    width: 85%;
+}
+</style>
+</head>
+<body>
+
+<h1 style="text-align:center;">Phase IV — Linear Regression Model Comparison</h1>
+
+<h2>Table 1 — Model Diagnostics</h2>
+<table><tr><th>Model</th><th>R²</th><th>Adj R²</th><th>MAE</th><th>MSE</th><th>RMSE</th><th>F-statistic</th></tr><tr><td style='text-align:center;'>Log(count+1)</td><td style='text-align:center;'>0.4845</td><td style='text-align:center;'>0.4822</td><td style='text-align:center;'>0.5528</td><td style='text-align:center;'>0.4977</td><td style='text-align:center;'>0.7055</td><td style='text-align:center;'>207.7481</td></tr><tr><td style='text-align:center;'>Sqrt(count)</td><td style='text-align:center;'>0.4282</td><td style='text-align:center;'>0.4256</td><td style='text-align:center;'>0.9037</td><td style='text-align:center;'>1.4301</td><td style='text-align:center;'>1.1959</td><td style='text-align:center;'>165.5081</td></tr></table><br>
+<div class='desc'>
+This table summarizes R², Adjusted R², MAE, MSE, RMSE, and the F-statistic for both models.
+</div>
+
+<h2>Table 2 — Parameter Estimates & Confidence Intervals</h2>
+<table><tr><th>Model</th><th>Intercept β₀</th><th>Slope β₁</th><th>Intercept CI [low,high]</th><th>Slope CI [low,high]</th><th>Equation</th></tr><tr><td style='text-align:center;'>Log(count+1)</td><td style='text-align:center;'>-7.2437</td><td style='text-align:center;'>0.0050</td><td style='text-align:center;'>[-8.5037, -5.9837]</td><td style='text-align:center;'>[0.0043, 0.0057]</td><td style='text-align:center;'>log(count+1) = -7.2437 + 0.0050·year</td></tr><tr><td style='text-align:center;'>Sqrt(count)</td><td style='text-align:center;'>-11.1546</td><td style='text-align:center;'>0.0076</td><td style='text-align:center;'>[-13.2904, -9.0188]</td><td style='text-align:center;'>[0.0065, 0.0088]</td><td style='text-align:center;'>sqrt(count) = -11.1546 + 0.0076·year</td></tr></table><br>
+<div class='desc'>
+Parameter table includes slopes, intercepts, and their 95% confidence intervals.
+</div>
+
+<h2>Table 3 — Hypothesis Test for Slope (β₁)</h2>
+<table><tr><th>Model</th><th>p-value</th><th>Decision</th><th>Interpretation</th></tr><tr><td style='text-align:center;'>Log(count+1)</td><td style='text-align:center;'>4.2577e-47</td><td style='text-align:center;'><span style='color:green;'>✔ Reject H₀</span></td><td style='text-align:center;'>Evidence of a statistically significant linear trend.</td></tr><tr><td style='text-align:center;'>Sqrt(count)</td><td style='text-align:center;'>7.0846e-38</td><td style='text-align:center;'><span style='color:green;'>✔ Reject H₀</span></td><td style='text-align:center;'>Evidence of a statistically significant linear trend.</td></tr></table><br>
+<div class='desc'>
+Interpretation meanings:<br>
+✔ Reject H₀ → Evidence of a statistically significant linear trend.<br>
+✘ Fail to Reject H₀ → No statistical evidence of a linear trend.
+</div>
+
+</body>
+</html>

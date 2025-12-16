@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Phase III — Master Feature Table</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align:center;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* ───── Table Styling ───── */
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px solid black; /* THICK border */
+    font-size: 16px;
+}
+
+th {
+    background: #3CB371;
+    border: 1px solid black;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;   /* ← center vertically */
+}
+
+td {
+    background: #F6EFD9;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;        /* ← center horizontally */
+    vertical-align: middle;    /* ← center vertically */
+}
+
+caption {
+    caption-side: bottom;
+    padding: 10px;
+    font-style: italic;
+}
+</style>
+
+</head>
+<body>
+
+<h1>Phase III — Master Feature Table</h1>
+<div class="subtitle">Dataset Size: 223 rows × 4 columns</div>
+
+<table>
+<tr><th>Feature Name</th><th>Pandas dType</th><th>Categorical/Numerical</th><th># Unique</th><th>% Missing</th><th>Description</th><th>Regression Role</th></tr>
+<tr><td>year</td><td>int64</td><td>Numerical</td><td>223</td><td>0.00%</td><td>Four-digit calendar year of meteorite record.</td><td>Predictor <br>(X)</td></tr>
+<tr><td>count</td><td>int64</td><td>Numerical</td><td>41</td><td>0.00%</td><td>Number of meteorites recorded for the given year.</td><td>Outcome <br>(Y, raw form)</td></tr>
+<tr><td>count_log</td><td>float64</td><td>Numerical</td><td>41</td><td>0.00%</td><td>Log-transformed annual meteorite count: log(count + 1).</td><td>Outcome <br>(Y, log model)</td></tr>
+<tr><td>count_sqrt</td><td>float64</td><td>Numerical</td><td>41</td><td>0.00%</td><td>Square-root-transformed annual meteorite count.</td><td>Outcome <br>(Y, sqrt model)</td></tr>
+</table>
+
+<br>
+<center><i>Table X. Summary of Phase III features, transformations, and distribution characteristics.</i></center>
+
+</body>
+</html>

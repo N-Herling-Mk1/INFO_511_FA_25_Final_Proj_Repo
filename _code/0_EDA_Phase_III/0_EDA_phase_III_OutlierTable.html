@@ -1,0 +1,157 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Phase III Outlier Summary Table</title>
+
+<style>
+
+  body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    padding: 20px;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+
+  .subtitle {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #444444;
+  }
+
+  table.master {
+    width: auto;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 3px solid #000;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  /* Violet column headers (Phase III uses #dcd0ff same as Phase II) */
+  table.master th {
+    background: #dcd0ff;
+    padding: 6px 10px;
+    border: 1px solid #000;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  /* Beige data cells */
+  table.master td {
+    background: #f4e8d2;
+    padding: 6px 10px;
+    border: 1px solid #000;
+    font-size: 16px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  /* Bold and left column for column names */
+  table.master td.colname {
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .footer {
+    font-size: 16px;
+    margin-top: 14px;
+    text-align: center;
+  }
+
+</style>
+</head>
+
+<body>
+
+<div class="title">Table 5 — Phase III Outlier Summary</div>
+<div class="subtitle">Dataset Size: 223 rows × 4 columns</div>
+
+<table class="master">
+  <thead>
+    <tr>
+      <th>Column</th>
+      <th>Total Count</th>
+      <th>Min</th>
+      <th>Max</th>
+      <th>Mean</th>
+      <th>Std Dev</th>
+      <th>25th %ile</th>
+      <th>50th %ile</th>
+      <th>75th %ile</th>
+      <th>% Within IQR</th>
+      <th>Outliers</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class='colname'>year</td>
+      <td>223</td>
+      <td>860.0</td>
+      <td>2013.0</td>
+      <td>1835.883</td>
+      <td>135.896</td>
+      <td>1804.500</td>
+      <td>1861.000</td>
+      <td>1916.500</td>
+      <td>93.27%</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td class='colname'>count</td>
+      <td>223</td>
+      <td>1.0</td>
+      <td>52.0</td>
+      <td>10.489</td>
+      <td>10.736</td>
+      <td>2.000</td>
+      <td>8.000</td>
+      <td>15.000</td>
+      <td>95.52%</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td class='colname'>count_log</td>
+      <td>223</td>
+      <td>0.6931471805599453</td>
+      <td>3.970291913552122</td>
+      <td>1.997</td>
+      <td>0.983</td>
+      <td>1.099</td>
+      <td>2.197</td>
+      <td>2.773</td>
+      <td>100.00%</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td class='colname'>count_sqrt</td>
+      <td>223</td>
+      <td>1.0</td>
+      <td>7.211102550927978</td>
+      <td>2.826</td>
+      <td>1.581</td>
+      <td>1.414</td>
+      <td>2.828</td>
+      <td>3.873</td>
+      <td>100.00%</td>
+      <td>0</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<div class="footer"><b>Table 5.</b> Summary of IQR outlier detection and distribution metrics for all numeric Phase III variables.</div>
+
+</body>
+</html>
